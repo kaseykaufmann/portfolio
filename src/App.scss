@@ -1,0 +1,86 @@
+$padding: 20px;
+
+.App {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.about {
+  height: 800px;
+}
+
+.skills {
+  height: 800px;
+}
+
+.experience {
+}
+
+.projects {
+}
+
+.hobbies {
+}
+
+.goals {
+}
+
+.row {
+  display: flex;
+  justify-content: space-around;
+}
+
+.col {
+  flex: 1;
+}
+
+$columns: 5;
+
+@for $i from 1 through $columns {
+  .spacing-#{$padding * $i} {
+    padding: $padding * $i;
+  }
+}
+
+header {
+  flex-basis: 10px;
+  padding-left: $padding;
+  padding-right: $padding;
+  background-color: rgba(43, 73, 68, 0.35);
+  h1 {
+    width: fit-content;
+    display: inline;
+  }
+  nav {
+    margin-top: 7px;
+    width: fit-content;
+    float: right;
+    button {
+      background-color: rgba(0, 244, 232, 0.441);
+      border: 3px solid rgba(20, 58, 61, 0.662);
+      margin-left: $padding / 2;
+      border-radius: 5px;
+    }
+  }
+}
+
+body {
+  margin: 0px;
+  background-color: rgb(146, 146, 146);
+  font-family: "Courier New", Courier, monospace;
+}
+
+.body {
+  flex: 1;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  padding-left: $padding;
+  padding-right: $padding;
+}
+
+footer {
+  flex-basis: 50px;
+  border-top: 1px solid grayscale($color: #221a1a1c);
+}
