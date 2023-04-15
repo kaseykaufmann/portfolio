@@ -78,7 +78,7 @@ const Skills = () => {
     for (let j = 0; j < words.length; j += 1) {
       temp.push([
         new THREE.Vector3().setFromSpherical(
-          spherical.set(radius, phiSpan * i, thetaSpan * j)
+          spherical.set(radius, phiSpan * i * 45, thetaSpan * j)
         ),
         words[j],
       ]);
@@ -88,7 +88,10 @@ const Skills = () => {
   return (
     <div className="skills" id="skills">
       <h2>Skills</h2>
-      <Canvas camera={{ position: [0, 0, 70], fov: 110 }}>
+      <Canvas
+        camera={{ position: [0, 0, 45], fov: 90 }}
+        style={{ height: 700 }}
+      >
         {temp.map(([pos, { logo, text }], index) => (
           <Word key={index} position={pos} url={logo} text={text} />
         ))}

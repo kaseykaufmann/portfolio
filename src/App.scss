@@ -1,4 +1,9 @@
 $padding: 20px;
+$borderRadius: 5px;
+$about-bgcolor: rgba(205, 71, 18, 0.74);
+$skills-bgcolor: rgba(127, 255, 212, 0.616);
+$contact-bgcolor: rgba(24, 135, 209, 0.616);
+$projects-bgcolor: rgba(14, 19, 22, 0.616);
 
 .App {
   height: 100vh;
@@ -7,17 +12,40 @@ $padding: 20px;
 }
 
 .about {
-  height: 800px;
+  margin: $padding 0px;
+  padding: 0px 12px;
+  min-height: 150px;
+  background-color: $about-bgcolor;
+  border-radius: $borderRadius * 4;
 }
 
 .skills {
   height: 800px;
+  background-color: $skills-bgcolor;
+  border-radius: $borderRadius * 4;
+  margin: $padding 0px;
+  padding: 0px 12px;
 }
 
 .experience {
 }
 
 .projects {
+  background-color: $projects-bgcolor;
+  border-radius: $borderRadius * 4;
+  padding: 0px 12px;
+  margin: $padding 0px;
+  a {
+    color: white;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  h3 {
+    text-align: left;
+  }
+  img {
+    float: right;
+  }
 }
 
 .hobbies {
@@ -43,6 +71,15 @@ $columns: 5;
   }
 }
 
+img {
+  width: 60px;
+  border-radius: $borderRadius;
+}
+
+p {
+  text-align: justify;
+}
+
 header {
   flex-basis: 10px;
   padding-left: $padding;
@@ -57,10 +94,23 @@ header {
     width: fit-content;
     float: right;
     button {
-      background-color: rgba(0, 244, 232, 0.441);
       border: 3px solid rgba(20, 58, 61, 0.662);
       margin-left: $padding / 2;
-      border-radius: 5px;
+      border-radius: $borderRadius;
+    }
+    .header-about {
+      background-color: $about-bgcolor;
+    }
+    .header-skills {
+      background-color: $skills-bgcolor;
+    }
+    .header-experience {
+    }
+    .header-projects {
+      background-color: $projects-bgcolor;
+    }
+    .header-contact {
+      background-color: $contact-bgcolor;
     }
   }
 }
@@ -76,11 +126,17 @@ body {
   overflow-y: scroll;
   display: flex;
   flex-direction: column;
-  padding-left: $padding;
-  padding-right: $padding;
+  padding-left: $padding * 5;
+  padding-right: $padding * 5;
 }
 
 footer {
   flex-basis: 50px;
-  border-top: 1px solid grayscale($color: #221a1a1c);
+  background-color: $contact-bgcolor;
+  margin: $padding 0px;
+  padding: 0px 12px;
+  border-radius: $borderRadius * 4;
+  h3 {
+    text-align: center;
+  }
 }
