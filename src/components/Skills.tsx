@@ -87,10 +87,9 @@ const Skills = () => {
 
   return (
     <div className="skills" id="skills">
-      <h2>Skills</h2>
       <Canvas
         camera={{ position: [0, 0, 45], fov: 90 }}
-        style={{ height: 700 }}
+        style={{ height: 700, borderRadius: "100%" }}
       >
         {temp.map(([pos, { logo, text }], index) => (
           <Word key={index} position={pos} url={logo} text={text} />

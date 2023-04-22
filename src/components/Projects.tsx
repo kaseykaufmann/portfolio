@@ -3,7 +3,6 @@ const TraineraidLogo = require("../logos/traineraid_logo.png");
 const Projects = () => {
   return (
     <div className="projects" id="projects">
-      <h2>Projects</h2>
       <div>
         <h3 className="row">
           <a
@@ -32,7 +31,6 @@ const Projects = () => {
           do is create a chat by adding them by email or phone number, and click
           on the workout they send!
         </p>
-
         <p>
           This app was made to make lives easier in people’s attempts for a
           healthier life. The most important thing is to have a fun and easy
